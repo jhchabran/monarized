@@ -25,7 +25,7 @@
 --     [15] = '#d33682' -- purple: integers and floating point numbers
 -- }
 
-local M = { 
+return { 
   base03 =    '#002b36',
   base02 =    '#073642',
   base01 =    '#586e75',
