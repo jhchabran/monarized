@@ -12,7 +12,7 @@ return function(c, s, cs)
         {'Normal', c.base2, c.base03},
         {'PMenu', c.base2, c.base02},
         {'PmenuSbar', c.base2, c.base02},
-        {'PMenuSel', c.cyan, c.base01, s.bold},
+        {'PMenuSel', c.base02, c.blue, s.bold},
         {'PmenuThumb', c.cyan, c.base01},
         {'SpecialKey', c.base01},
         {'SpellBad', c.red, c.none, cs.underline},
@@ -29,42 +29,42 @@ return function(c, s, cs)
         {'RedrawDebugClear', c.base2, c.yellow},
         {'RedrawDebugComposed', c.base2, c.green},
         {'RedrawDebugRecompose', c.base2, c.red},
-        --- Neovim ---
+        -- --- Neovim ---
         {'healthError', c.red, c.base03},
         {'healthSuccess', c.green, c.base03},
         {'healthWarning', c.yellow, c.base03},
         {'TermCursorNC', c.none, c.base03},
         {'NvimInternalError', c.red, c.red},
-        --- Gutter ---
+        -- --- Gutter ---
         {'CursorColumn', c.none, c.base03},
         {'CursorLineNr', c.base2, c.base03},
         {'Folded', c.base01, c.base03, s.bold},
         {'FoldColumn', c.base01, c.base03},
         {'SignColumn', c.base03, c.base03},
-        -- Navigation ---
+        -- -- Navigation ---
         {'Directory', c.cyan},
-        --- Prompt/Status ---
+        -- --- Prompt/Status ---
         {'EndOfBuffer', c.base03},
         {'ErrorMsg', c.base2, c.red},
         {'ModeMsg', c.base2},
         {'MoreMsg', c.cyan},
         {'Question', c.base2},
-        {'StatusLine', c.cyan, c.base01},
+        {'StatusLine', c.base1, c.base02},
         {'StatusLineNC', c.base2, c.base03},
         {'StatusLineTerm', c.cyan, c.base01},
         {'StatusLineTermNC', c.base2, c.base03},
         {'WarningMsg', c.base03, c.yellow},
         {'WildMenu', c.cyan, c.base03},
-        --- Search ---
-        {'IncSearch', c.base2, c.base030, s.underline},
-        {'Search', c.base03, c.cyan},
-        --- Tabs ---
+        -- --- Search ---
+        {'IncSearch', c.base03, c.orange, s.underline},
+        {'Search', c.base03, c.yellow},
+        -- --- Tabs ---
         {'TabLine', c.base2, c.base03},
         {'TabLineFill', c.base2, c.base03},
         {'TabLineSel', c.cyan, c.base01},
-        --- Window ---
+        -- --- Window ---
         {'Title', c.base2, c.none, s.bold},
-        --- Others ---
+        -- --- Others ---
         {'qffilename', c.yellow, c.none, s.none},
         {'Whitespace', c.base2} -- idk
     }
