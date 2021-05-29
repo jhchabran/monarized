@@ -1,24 +1,24 @@
-# Nordbuddy
+# monarized
 
-A [nord](https://www.nordtheme.com/)-esque colorscheme using [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim)
+A washed down solarized based colorscheme using [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim)
 
-Nordbuddy supports highlighting for [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), [Neovim LSP](https://neovim.io/doc/user/lsp.html), and [Telescope](https://github.com/nvim-telescope/telescope.nvim/).
+monarized supports highlighting for [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), [Neovim LSP](https://neovim.io/doc/user/lsp.html), and [Telescope](https://github.com/nvim-telescope/telescope.nvim/).
 
 ![Color Preview](https://user-images.githubusercontent.com/42545625/112913430-935a6a80-90c7-11eb-867e-394b1790a14f.png)
 
 ### Install
 
-You'll need (at least) Neovim 0.4.0 for `nordbuddy` to work. You'll also need [colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
+You'll need (at least) Neovim 0.4.0 for `monarized` to work. You'll also need [colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
 
 with `Vim-Plug`
 ``` vim
 Plug 'tjdevries/colorbuddy.nvim'
-Plug 'maaslalani/nordbuddy'
+Plug 'jhchabran/monarized'
 ```
 
 with `packer.nvim`
 ``` lua
-use {'maaslalani/nordbuddy', 'tjdevries/colorbuddy.nvim'}
+use {'jhchabran/monarized', 'tjdevries/colorbuddy.nvim'}
 ```
 
 ### Setup
@@ -27,14 +27,14 @@ Enable the colorscheme in `init.vim`
 
 ```vim
 " Vimscript
-colorscheme nordbuddy
+colorscheme monarized
 ```
 
 or in `init.lua`
 
 ```lua
 -- Lua
-require('colorbuddy').colorscheme('nordbuddy')
+require('colorbuddy').colorscheme('monarized')
 ```
 
 #### Spell

@@ -1,8 +1,8 @@
-local nordbuddy = require'nordbuddy'
+local monarized = require'monarized'
 
 describe('colorscheme', function()
   it("should not error", function()
-    nordbuddy.setup()
-    assert.has_no.errors(nordbuddy.colors)
+    monarized.setup()
+    assert.has_no.errors(monarized.colors)
   end)
 end)

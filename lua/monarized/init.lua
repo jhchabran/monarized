@@ -1,6 +1,6 @@
-local utils = require('nordbuddy.utils')
-local palette = require('nordbuddy.palette')
-local colors = require('nordbuddy.colors')
+local utils = require('monarized.utils')
+local palette = require('monarized.palette')
+local colors = require('monarized.colors')
 local Color, c, Group = require('colorbuddy').setup()
 local s = require('colorbuddy.style').styles
 local vim = vim
@@ -11,11 +11,14 @@ local function customizations()
     local italic = s.italic
 
     if vim.g.nord_spell == 'underline' then
+      --  TODO
         underline = s.underline
     elseif vim.g.nord_spell == 'undercurl' then
+      --  TODO
         underline = s.undercurl
     end
 
+      --  TODO
     if vim.g.nord_italic ~= nil and not vim.g.nord_italic then
         italic = s.none
     end
@@ -28,26 +31,26 @@ end
 
 local function initialize()
     for _k, _v in pairs(palette) do
-        Color.new('nord' .. _k, _v)
+        Color.new(_k, _v)
     end
 
-    vim.g.colors_name = 'nordbuddy'
-    vim.g.terminal_color_0 = palette[1]
-    vim.g.terminal_color_1 = palette[11]
-    vim.g.terminal_color_2 = palette[14]
-    vim.g.terminal_color_3 = palette[13]
-    vim.g.terminal_color_4 = palette[9]
-    vim.g.terminal_color_5 = palette[15]
-    vim.g.terminal_color_6 = palette[8]
-    vim.g.terminal_color_7 = palette[5]
-    vim.g.terminal_color_8 = palette[3]
-    vim.g.terminal_color_9 = palette[11]
-    vim.g.terminal_color_10 = palette[14]
-    vim.g.terminal_color_11 = palette[13]
-    vim.g.terminal_color_12 = palette[9]
-    vim.g.terminal_color_13 = palette[15]
-    vim.g.terminal_color_14 = palette[7]
-    vim.g.terminal_color_15 = palette[6]
+    vim.g.colors_name = 'monarized'
+    vim.g.terminal_color_0 = palette.base02
+    vim.g.terminal_color_1 = palette.red
+    vim.g.terminal_color_2 = palette.green
+    vim.g.terminal_color_3 = palette.yellow
+    vim.g.terminal_color_4 = palette.blue
+    vim.g.terminal_color_5 = palette.magenta
+    vim.g.terminal_color_6 = palette.cyan
+    vim.g.terminal_color_7 = palette.base2
+    vim.g.terminal_color_8 = palette.base03
+    vim.g.terminal_color_9 = palette.orange
+    vim.g.terminal_color_10 = palette.base01
+    vim.g.terminal_color_11 = palette.base00
+    vim.g.terminal_color_12 = palette.base0
+    vim.g.terminal_color_13 = palette.violet
+    vim.g.terminal_color_14 = palette.base1
+    vim.g.terminal_color_15 = palette.base3
 
     return customizations()
 end
@@ -55,7 +58,7 @@ end
 local function load(c, s, cs)
     local definitions = {}
     for _, k in pairs(colors) do
-        local fn = require('nordbuddy.colors.' .. k)
+        local fn = require('monarized.colors.' .. k)
         table.insert(definitions, fn(c, s, cs))
     end
 

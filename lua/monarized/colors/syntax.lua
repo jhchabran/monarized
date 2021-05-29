@@ -1,4 +1,4 @@
-local utils = require('nordbuddy.utils')
+local utils = require('monarized.utils')
 
 return function(c, s, cs)
     local attributes = {
@@ -169,38 +169,38 @@ return function(c, s, cs)
         'rustCommentLineDocError', 'rustCommentBlockDocError' -- rust
     }
     local groups = {
-        {attributes, c.nord9},
-        {numbers, c.nord15},
-        {comments, c.nord3:light()},
-        {constructors, c.nord4, c.none, cs.italic}, -- in C++ variable->constructors() \\ TS docs unclear
-        {conditionals, c.nord10, c.none, cs.italic},
-        {constants, c.nord4},
-        {defines, c.nord10},
-        {exceptions, c.nord9},
-        {fields, c.nord9, c.none},
-        {functions, c.nord4, c.none, cs.italic},
-        {includes, c.nord10},
-        {keywords, c.nord9, c.none, s.none},
-        {labels, c.nord10, c.none, cs.italic},
-        {namespaces, c.nord4, c.none, cs.italic},
-        {nones, c.nord4},
-        {operators, c.nord9},
-        {parameters, c.nord4, c.none, cs.italic},
-        {properties, c.nord9},
-        {punctuations, c.nord9},
-        {repeats, c.nord9, c.none, cs.italic},
-        {strings, c.nord14},
-        {strings_specials, c.nord13},
-        {symbols, c.nord13},
-        {texts, c.nord4},
-        {uris, c.nord15},
-        {types, c.nord7},
-        {variables, c.nord4},
-        {builtins, c.nord9, c.none, cs.italic},
-        {notes, c.nord12},
-        {warnings, c.nord13},
-        {dangers, c.nord13},
-        {errors, c.nord11}
+        {attributes, c.blue},
+        {numbers, c.base2},
+        {comments, c.blue:light()},
+        {constructors, c.base3, c.none, cs.italic}, -- in C++ variable->constructors() \\ TS docs unclear
+        {conditionals, c.base3, c.none, cs.italic},
+        {constants, c.base3},
+        {defines, c.blue},
+        {exceptions, c.blue},
+        {fields, c.base2, c.none},
+        {functions, c.base2, c.none, cs.italic},
+        {includes, c.blue},
+        {keywords, c.base3, c.none, cs.bold},
+        {labels, c.base3, c.none, cs.italic},
+        {namespaces, c.base3, c.none, cs.italic},
+        {nones, c.base3},
+        {operators, c.base3},
+        {parameters, c.base3, c.none, cs.italic},
+        {properties, c.base3},
+        {punctuations, c.base3},
+        {repeats, c.base3, c.none, cs.italic},
+        {strings, c.base2},
+        {strings_specials, c.base2},
+        {symbols, c.base3},
+        {texts, c.base2},
+        {uris, c.base2},
+        {types, c.base3},
+        {variables, c.base3},
+        {builtins, c.base3, c.none, cs.italic},
+        {notes, c.base2},
+        {warnings, c.yellow},
+        {dangers, c.yellow},
+        {errors, c.red}
 
     }
 
