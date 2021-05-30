@@ -39,7 +39,7 @@ require('colorbuddy').colorscheme('monarized')
 
 #### Spell
 
-You can use the option `g:nord_spell` to choose how to underline the spell errors.
+You can use the option `g:monarized_spell` to choose how to underline the spell errors.
 Possible options are `underline`, `undercurl`. By default no line is used.
 
 ### Warning
