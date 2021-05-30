@@ -23,7 +23,7 @@ return function(c, s, cs)
         {'VisualNOS', c.none, c.base02},
         {'VertSplit', c.base03},
         {'VisualNC', c.none, c.base02},
-        {'NormalNC', c.base2, c.none},
+        {'NormalNC', c.base1:dark(), c.none},
         {'NormalFloat', c.base1, c.base02},
         {'RedrawDebugNormal', c.base03, c.base2},
         {'RedrawDebugClear', c.base2, c.yellow},
@@ -64,6 +64,7 @@ return function(c, s, cs)
         {'TabLineSel', c.cyan, c.base01},
         -- --- Window ---
         {'Title', c.base2, c.none, s.bold},
+        {'FloatBorder', c.base1:dark(), c.none},
         -- --- Others ---
         {'qffilename', c.yellow, c.none, s.none},
         {'Whitespace', c.base2} -- idk
