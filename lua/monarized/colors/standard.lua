@@ -59,9 +59,9 @@ return function(c, s, cs)
         {'IncSearch', c.base03, c.orange, s.underline},
         {'Search', c.base03, c.yellow},
         -- --- Tabs ---
-        {'TabLine', c.base2, c.base03},
-        {'TabLineFill', c.base2, c.base03},
-        {'TabLineSel', c.cyan, c.base01},
+        {'TabLine', c.base1, c.base03},
+        {'TabLineFill', c.base1, c.base03},
+        {'TabLineSel', c.yellow, c.base02},
         -- --- Window ---
         {'Title', c.base2, c.none, s.bold},
         {'FloatBorder', c.base1:dark(), c.none},
