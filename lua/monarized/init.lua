@@ -77,4 +77,11 @@ function M:use()
     end
 end
 
+function M.change_style(style)
+  vim.g.monarized_style = style
+  require("plenary.reload").reload_module("colorbuddy", true)
+  require("plenary.reload").reload_module("monarized", true)
+  require('colorbuddy').colorscheme('monarized')
+end
+
 return M
