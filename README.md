@@ -4,7 +4,7 @@ A washed down solarized based colorscheme using [colorbuddy.nvim](https://github
 
 monarized supports highlighting for [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter), [Neovim LSP](https://neovim.io/doc/user/lsp.html), and [Telescope](https://github.com/nvim-telescope/telescope.nvim/).
 
-![Color Preview](https://user-images.githubusercontent.com/42545625/112913430-935a6a80-90c7-11eb-867e-394b1790a14f.png)
+![Color Preview](https://github.com/jhchabran/nvim-config/blob/main/screenshot.jpg?raw=true)
 
 ### Install
 
