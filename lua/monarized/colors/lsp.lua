@@ -1,8 +1,8 @@
 return function(c, s, cs)
     return {
-        {'LspReferenceText', c.base2},
-        {'LspReferenceRead', c.base3},
-        {'LspReferenceWrite', c.base3},
+        {'LspReferenceText', c.fg1},
+        {'LspReferenceRead', c.fg0},
+        {'LspReferenceWrite', c.fg0},
         {'LspDiagnosticsDefaultHint', c.violet},
         {'LspDiagnosticsDefaultError', c.red},
         {'LspDiagnosticsDefaultWarning', c.yellow},

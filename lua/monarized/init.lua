@@ -32,22 +32,22 @@ local function initialize()
     end
 
     vim.g.colors_name = 'monarized'
-    vim.g.terminal_color_0 = palette.base02
+    vim.g.terminal_color_0 = palette.bg1
     vim.g.terminal_color_1 = palette.red
     vim.g.terminal_color_2 = palette.green
     vim.g.terminal_color_3 = palette.yellow
     vim.g.terminal_color_4 = palette.blue
     vim.g.terminal_color_5 = palette.magenta
     vim.g.terminal_color_6 = palette.cyan
-    vim.g.terminal_color_7 = palette.base2
-    vim.g.terminal_color_8 = palette.base03
+    vim.g.terminal_color_7 = palette.fg1
+    vim.g.terminal_color_8 = palette.bg0
     vim.g.terminal_color_9 = palette.orange
-    vim.g.terminal_color_10 = palette.base01
-    vim.g.terminal_color_11 = palette.base00
-    vim.g.terminal_color_12 = palette.base0
+    vim.g.terminal_color_10 = palette.fade0
+    vim.g.terminal_color_11 = palette.fade0
+    vim.g.terminal_color_12 = palette.fade1
     vim.g.terminal_color_13 = palette.violet
-    vim.g.terminal_color_14 = palette.base1
-    vim.g.terminal_color_15 = palette.base3
+    vim.g.terminal_color_14 = palette.fade1
+    vim.g.terminal_color_15 = palette.fg0
 
     return customizations()
 end
@@ -73,7 +73,13 @@ function M:use()
 
         local cNone = check_none(c.none)
         local sNone = check_none(s.none)
-        Group.new(group[1], cNone(group[2]), cNone(group[3]), sNone(group[4]))
+        if not pcall(function()
+          Group.new(group[1], cNone(group[2]), cNone(group[3]), sNone(group[4]))
+        end) then
+          for _, v in pairs(group) do
+            print(v)
+          end
+        end
     end
 end
 

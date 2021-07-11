@@ -33,7 +33,7 @@ return function(c, s, cs)
             {'markdownId', c.cyan},
             {'markdownIdDeclaration', c.cyan},
             {'markdownIdDelimiter', c.blue},
-            {'markdownUrl', c.base2},
+            {'markdownUrl', c.fg1},
             {'markdownLinkText', c.cyan},
             {'markdownLinkTextDelimiter', c.blue},
             {'markdownLinkDelimiter', c.blue}

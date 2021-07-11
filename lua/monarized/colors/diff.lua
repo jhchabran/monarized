@@ -1,8 +1,8 @@
 return function(c, s, cs)
     return {
-        {'DiffAdd', c.green, c.base02},
-        {'DiffChange', c.yellow, c.base02},
-        {'DiffDelete', c.red, c.base02},
-        {'DiffText', c.red, c.base02}
+        {'DiffAdd', c.green, c.bg1},
+        {'DiffChange', c.yellow, c.bg1},
+        {'DiffDelete', c.red, c.bg1},
+        {'DiffText', c.red, c.bg1}
     }
 end
