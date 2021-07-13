@@ -37,6 +37,37 @@ or in `init.lua`
 require('colorbuddy').colorscheme('monarized')
 ```
 
+#### Styles
+
+Styles can be changed at the runtime, with: `lua require("monarized").set_style("[STYLE NAME]")`. All styles retains the same
+low contrast and washed down approach style.
+
+If [`kitty`](https://sw.kovidgoyal.net/kitty/) is detected on the path, background and terminal colors will be updated when changing styles.
+
+#### Available styles
+
+- `dark`: the original style, a washed down solarized dark.
+- `dark_purple`: a purple flavor.
+
+#### Lualine
+
+Monarized comes with a custom theme for [`lualine`](https://github.com/hoob3rt/lualine.nvim) that uses the same base palette, making
+the style consistent, including when changing styles at the runtime.
+
+To enable this feature, 
+
+1. Set `g:monarized_lualine` to true.
+2. Tell `lualine` to use the `monarized` theme:
+
+```lua
+  -- packer ...
+  use { "hoob3rt/lualine.nvim", config = function()
+    require("lualine").setup({
+      options = {
+        theme = require('monarized.lualine'),
+        -- ...
+```
+
 #### Spell
 
 You can use the option `g:monarized_spell` to choose how to underline the spell errors.

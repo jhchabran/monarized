@@ -83,11 +83,29 @@ function M:use()
     end
 end
 
-function M.change_style(style)
+function M.set_style(style)
   vim.g.monarized_style = style
   require("plenary.reload").reload_module("colorbuddy", true)
   require("plenary.reload").reload_module("monarized", true)
   require('colorbuddy').colorscheme('monarized')
+  local refreshed_palette = require('monarized.palette')
+
+  pcall(function()
+    require("plenary.reload").reload_module("lualine", true)
+    require("lualine").setup{
+      options = {
+        theme = require('monarized.lualine'),
+      }
+    }
+  end)
+
+  -- try to adjust kitty's background
+  if not vim.fn.executable("kitty") then
+    return
+  end
+  local cmd = "kitty @ set-colors background=%s foreground=%s"
+  vim.fn.system(cmd:format(refreshed_palette.bg0, refreshed_palette.fg0))
+  vim.cmd([[redraw]])
 end
 
 return M
