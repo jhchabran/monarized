@@ -6,6 +6,12 @@ monarized supports highlighting for [Treesitter](https://github.com/nvim-treesit
 
 ![Color Preview](https://github.com/jhchabran/nvim-config/blob/main/screenshot.jpg?raw=true)
 
+## What makes this different?
+
+Rather than going for a full spectrum of colors, which can feel like more distracting to some, `monarized` goes for four colors (`fg`, `bg`, `fade` and `hl`) and sticks with them for most of the elements. To add a bit more relief to the syntax highlighting without introducing too much contrast, each of those colors exists in their base form and a alternate one (`fg0` and `fg1`). In some cases where a only a specific color makes sense (diffs are red and green, alert is orange and error is red), those colors are used, regardless of the base colors.
+
+The result is something standing in the middle of monochrome themes and fully colorized themes. On a personal note, when I feel stuck on something or simply bored, I find it nice to change the style to give a fresher look to the code.
+
 ### Install
 
 You'll need (at least) Neovim 0.4.0 for `monarized` to work. You'll also need [colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
@@ -43,7 +49,12 @@ low contrast and washed down approach style.
 #### Available styles
 
 - `dark`: the original style, a washed down solarized dark.
-- `dark_purple`: a purple flavor.
+- `light`: light flavor of the above.
+- `purple-dark`: a purple flavor.
+- `gruvbox-dark`: washed down gruvbox.
+- `gruvbox-light`: light flavor of the above.
+
+See at the bottom of this README for the screenshots.
 
 ####
 
@@ -74,10 +85,30 @@ To enable this feature,
 You can use the option `g:monarized_spell` to choose how to underline the spell errors.
 Possible options are `underline`, `undercurl`. By default no line is used.
 
-### Warning
+### Contributing
 
-This is a work in progress 🚧
+- This is very much a work in progress 🚧
+- The code structure could vastly be improved, but I am focused on making it look nice before anything else.
+  - If you'd like to improve it, I'd gladly take a PR for it.
+- I you have an idea of some nice colors style, feel free to open a PR!
 
 #### Known issues
 
 - using `telescope.nvim` and `nvim-treesitter` variable preview, `var` keyword has a wrong highlight.
+
+## Screenshots
+
+`dark`
+![](./screenshots/dark.png)
+
+`light`
+![](./screenshots/light.png)
+
+`purple-dark`
+![](./screenshots/purple-dark.png)
+
+`gruvbox-dark`
+![](./screenshots/gruvbox-dark.png)
+
+`gruvbox-light`
+![](./screenshots/gruvbox-light.png)
