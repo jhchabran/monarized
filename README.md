@@ -17,24 +17,22 @@ Plug 'jhchabran/monarized'
 ```
 
 with `packer.nvim`
+
 ``` lua
-use {'jhchabran/monarized', 'tjdevries/colorbuddy.nvim'}
-```
+use {
+  'jhchabran/monarized',
+  requires = 'jdevries/colorbuddy.nvim'
+  config = function()
+    -- update lualine theme when changing styles
+    vim.g.monarized_lualine = true
+    -- update kitty background and foreground when changing styles
+    vim.g.monarized_kitty_colors = true
 
-### Setup
-
-Enable the colorscheme in `init.vim`
-
-```vim
-" Vimscript
-colorscheme monarized
-```
-
-or in `init.lua`
-
-```lua
--- Lua
-require('colorbuddy').colorscheme('monarized')
+    require('colorbuddy').colorscheme('monarized')
+    -- optional: adjust style
+    -- require("monarized").set_style("dark_purple")
+  end
+}
 ```
 
 #### Styles
@@ -42,12 +40,15 @@ require('colorbuddy').colorscheme('monarized')
 Styles can be changed at the runtime, with: `lua require("monarized").set_style("[STYLE NAME]")`. All styles retains the same
 low contrast and washed down approach style.
 
-If [`kitty`](https://sw.kovidgoyal.net/kitty/) is detected on the path, background and terminal colors will be updated when changing styles.
-
 #### Available styles
 
 - `dark`: the original style, a washed down solarized dark.
 - `dark_purple`: a purple flavor.
+
+####
+
+If [`kitty`](https://sw.kovidgoyal.net/kitty/) is detected on the path and that `vim.g.monarized_kitty_colors` is set to true, background and terminal colors will be updated when changing styles.
+
 
 #### Lualine
 

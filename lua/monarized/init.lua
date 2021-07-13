@@ -105,7 +105,7 @@ function M.set_style(style)
   require("plenary.reload").reload_module("monarized", true)
   require('colorbuddy').colorscheme('monarized')
 
-  if vim.fn.executable("kitty") then
+  if vim.fn.executable("kitty") and vim.g.monarized_kitty_colors then
     update_kitty()
   end
 
