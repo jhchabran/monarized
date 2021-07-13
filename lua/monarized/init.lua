@@ -62,6 +62,22 @@ local function load(c, s, cs)
     return utils.merge(definitions)
 end
 
+local function update_kitty()
+  local refreshed_palette = require('monarized.palette')
+  local cmd = "kitty @ set-colors background=%s foreground=%s"
+  vim.fn.system(cmd:format(refreshed_palette.bg0, refreshed_palette.fg0))
+  vim.cmd([[redraw]])
+end
+
+local function update_lualine()
+  require("plenary.reload").reload_module("lualine", true)
+  require("lualine").setup{
+    options = {
+      theme = require('monarized.lualine'),
+    }
+  }
+end
+
 function M:use()
     local cs = initialize()
     local colors = load(c, s, cs)
@@ -88,24 +104,14 @@ function M.set_style(style)
   require("plenary.reload").reload_module("colorbuddy", true)
   require("plenary.reload").reload_module("monarized", true)
   require('colorbuddy').colorscheme('monarized')
-  local refreshed_palette = require('monarized.palette')
 
-  pcall(function()
-    require("plenary.reload").reload_module("lualine", true)
-    require("lualine").setup{
-      options = {
-        theme = require('monarized.lualine'),
-      }
-    }
-  end)
-
-  -- try to adjust kitty's background
-  if not vim.fn.executable("kitty") then
-    return
+  if vim.fn.executable("kitty") then
+    update_kitty()
   end
-  local cmd = "kitty @ set-colors background=%s foreground=%s"
-  vim.fn.system(cmd:format(refreshed_palette.bg0, refreshed_palette.fg0))
-  vim.cmd([[redraw]])
+
+  if vim.g.monarized_lualine then
+    update_lualine()
+  end
 end
 
 return M
