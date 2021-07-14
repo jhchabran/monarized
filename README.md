@@ -27,7 +27,7 @@ with `packer.nvim`
 ``` lua
 use {
   'jhchabran/monarized',
-  requires = 'jdevries/colorbuddy.nvim'
+  requires = 'tjdevries/colorbuddy.nvim'
   config = function()
     -- update lualine theme when changing styles
     vim.g.monarized_lualine = true
