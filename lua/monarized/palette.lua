@@ -40,6 +40,19 @@ if vim.g.monarized_style == 'light' then
   colors.hl1 = '#859900'
 end
 
+if vim.g.monarized_style == 'gray-dark' then
+  colors.bg0 = '#0e0e0e'
+  colors.bg1 = '#1c1c1c'
+  colors.fg0 = '#b2b2b2'
+  colors.fg1 = '#929292'
+  colors.fade0 = '#5F606B'
+  colors.fade1 = '#95969C'
+  colors.accent0 = '#8FBCBB'
+  colors.accent1 = '#88C0D0'
+  colors.hl0 = '#268bd2'
+  colors.hl1 = '#2aa198'
+end
+
 if vim.g.monarized_style == 'purple-dark' then
   colors.bg0 = '#101129'
   colors.bg1 = '#171830'

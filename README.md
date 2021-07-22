@@ -51,8 +51,10 @@ low contrast and washed down approach style.
 - `dark`: the original style, a washed down solarized dark.
 - `light`: light flavor of the above.
 - `purple-dark`: a purple flavor.
-- `gruvbox-dark`: washed down gruvbox.
+- `gruvbox-dark`: a washed down gruvbox.
 - `gruvbox-light`: light flavor of the above.
+- `gray-dark`: a darker flavor, with blue accents.
+- `nord-dark`: a washed down nord-theme.
 
 See at the bottom of this README for the screenshots.
 
@@ -88,6 +90,7 @@ Possible options are `underline`, `undercurl`. By default no line is used.
 ### Contributing
 
 - This is very much a work in progress 🚧
+  - I adjust themes as I use them, meaning some get more work than the others. I'd gladly merge improvements, especially on the light themes!
 - The code structure could vastly be improved, but I am focused on making it look nice before anything else.
   - If you'd like to improve it, I'd gladly take a PR for it.
 - I you have an idea of some nice colors style, feel free to open a PR!
@@ -112,3 +115,4 @@ Possible options are `underline`, `undercurl`. By default no line is used.
 
 `gruvbox-light`
 ![](./screenshots/gruvbox-light.png)
+
