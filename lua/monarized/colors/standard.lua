@@ -19,7 +19,7 @@ return function(c, s, cs)
         {'SpellCap', c.yellow, c.none, cs.underline},
         {'SpellLocal', c.fade1, c.none, cs.underline},
         {'SpellRare', c.fg0, c.none, cs.underline},
-        {'Visual', c.fg1, c.hl1},
+        {'Visual', c.bg0, c.hl1},
         {'VisualNOS', c.none, c.bg1},
         {'VertSplit', c.bg0},
         {'VisualNC', c.none, c.bg1},
