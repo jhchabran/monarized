@@ -6,6 +6,7 @@ return {
     'lsp',
     'markdown',
     'standard',
+    'neogit',
     'symbols_outline',
     'syntax',
     'telescope',
