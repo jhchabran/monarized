@@ -14,7 +14,7 @@ The result is something standing in the middle of monochrome themes and fully co
 
 ### Install
 
-You'll need (at least) Neovim 0.4.0 for `monarized` to work. You'll also need [colorbuddy](https://github.com/tjdevries/colorbuddy.nvim).
+You'll need (at least) Neovim 0.5.0 for `monarized` to work. You'll also need [colorbuddy](https://github.com/tjdevries/colorbuddy.nvim). If you want the optional style picker, [Telescope](https://github.com/nvim-telescope/telescope.nvim) is required as well.
 
 with `Vim-Plug`
 ``` vim
@@ -37,6 +37,10 @@ use {
     require('colorbuddy').colorscheme('monarized')
     -- optional: adjust style
     -- require("monarized").set_style("dark_purple")
+
+    -- optional: enable style picker
+    -- require('telescope').load_extension('monarized')
+    -- It can then be used with :Telescope monarized.
   end
 }
 ```
@@ -55,6 +59,8 @@ low contrast and washed down approach style.
 - `gruvbox-light`: light flavor of the above.
 - `gray-dark`: a darker flavor, with blue accents.
 - `nord-dark`: a washed down nord-theme.
+
+If telescope is available (and that the extension is loaded), `Telescope monarized` allows to change style interactively.
 
 See at the bottom of this README for the screenshots.
 

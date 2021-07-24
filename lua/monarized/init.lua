@@ -114,4 +114,8 @@ function M.set_style(style)
   end
 end
 
+function M.styles()
+  return {"dark", "light", "gray-dark", "purple-dark", "nord-dark", "gruvbox-dark", "gruvbox-light"}
+end
+
 return M
