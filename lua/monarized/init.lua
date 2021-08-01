@@ -115,7 +115,7 @@ function M.set_style(style)
 end
 
 function M.styles()
-  return {"dark", "light", "gray-dark", "purple-dark", "nord-dark", "gruvbox-dark", "gruvbox-light"}
+  return {"dark", "light", "gray-dark", "purple-dark", "nord-dark", "gruvbox-dark", "gruvbox-light", "sienna"}
 end
 
 return M

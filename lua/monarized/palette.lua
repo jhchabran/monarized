@@ -53,6 +53,21 @@ if vim.g.monarized_style == 'gray-dark' then
   colors.hl1 = '#2aa198'
 end
 
+if vim.g.monarized_style == 'sienna' then
+  colors.bg1 = '#262626'
+  colors.bg0 = '#1c1c1c'
+  colors.fg0 = '#c2787a'
+  colors.fg1 = '#b34f53'
+  -- colors.fg1 = '#d95a5f'
+  colors.fade0 = '#805959'
+  colors.fade1 = '#d2a2a1'
+  colors.accent0 = '#fa9a5b'
+  colors.accent1 = '#d95a5f'
+  -- colors.accent1 = '#aaa7a4'
+  colors.hl0 = '#96af89'
+  colors.hl1 = '#a0cece'
+end
+
 if vim.g.monarized_style == 'purple-dark' then
   colors.bg0 = '#101129'
   colors.bg1 = '#171830'

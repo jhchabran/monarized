@@ -58,7 +58,8 @@ low contrast and washed down approach style.
 - `gruvbox-dark`: a washed down gruvbox.
 - `gruvbox-light`: light flavor of the above.
 - `gray-dark`: a darker flavor, with blue accents.
-- `nord-dark`: a washed down nord-theme.
+- `nord-dark`: a washed down [nord-theme](https://www.nordtheme.com).
+- `sienna`: a red and brown low contrast theme inspired from [Siena.vim](https://github.com/brettbar/siena.vim)
 
 If telescope is available (and that the extension is loaded), `Telescope monarized` allows to change style interactively.
 
@@ -122,3 +123,8 @@ Possible options are `underline`, `undercurl`. By default no line is used.
 `gruvbox-light`
 ![](./screenshots/gruvbox-light.png)
 
+`nord-dark`
+![](./screenshots/nord-dark.png)
+
+`sienna`
+![](./screenshots/sienna.png)
