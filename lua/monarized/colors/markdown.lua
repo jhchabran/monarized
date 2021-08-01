@@ -1,7 +1,7 @@
 local utils = require('monarized.utils')
 
 return function(c, s, cs)
-    local to_groups = utils.highlight_to_groups({c.cyan, c.none})
+    local to_groups = utils.highlight_to_groups({c.accent1, c.none})
     local delimiters = to_groups({
         'markdownH1Delimiter',
         'markdownH2Delimiter',
@@ -11,7 +11,7 @@ return function(c, s, cs)
         'markdownH6Delimiter'
     })
 
-    to_groups = utils.highlight_to_groups({c.cyan, c.none, s.bold})
+    to_groups = utils.highlight_to_groups({c.accent1, c.none, s.bold})
     local headers = to_groups({
         'markdownH1',
         'markdownH2',
@@ -25,18 +25,18 @@ return function(c, s, cs)
         delimiters,
         headers,
         {
-            {'markdownCode', c.cyan},
-            {'markdownCodeDelimiter', c.cyan},
-            {'markdownBlockquote', c.cyan},
-            {'markdownFootnote', c.cyan},
-            {'markdownFootnoteDefinition', c.cyan},
-            {'markdownId', c.cyan},
-            {'markdownIdDeclaration', c.cyan},
-            {'markdownIdDelimiter', c.blue},
+            {'markdownCode', c.accent0},
+            {'markdownCodeDelimiter', c.accent1},
+            {'markdownBlockquote', c.accent1},
+            {'markdownFootnote', c.accent1},
+            {'markdownFootnoteDefinition', c.accent1},
+            {'markdownId', c.accent1},
+            {'markdownIdDeclaration', c.accent1},
+            {'markdownIdDelimiter', c.fade0},
             {'markdownUrl', c.fg1},
-            {'markdownLinkText', c.cyan},
-            {'markdownLinkTextDelimiter', c.blue},
-            {'markdownLinkDelimiter', c.blue}
+            {'markdownLinkText', c.accent1},
+            {'markdownLinkTextDelimiter', c.fade0},
+            {'markdownLinkDelimiter', c.fade0}
         }
     })
 end
