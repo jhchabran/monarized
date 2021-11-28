@@ -16,7 +16,7 @@ local function customizations()
         underline = s.undercurl
     end
 
-    if vim.g.monarized_italic ~= nil and not vim.g.monarized_italic then
+    if vim.g.monarized_italic == nil or vim.g.monarized_italic == false then
         italic = s.none
     end
 

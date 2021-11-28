@@ -2,7 +2,7 @@ return function(c, s, cs)
     return {
         --- Editor---
         {'ColorColumn', c.none, c.bg1},
-        {'Cursor', c.bg0, c.accent1},
+        {'Cursor', c.hl0, c.bg0},
         {'CursorLine', c.none, c.bg1},
         {'Error', c.fg0, c.red},
         {'iCursor', c.bg0, c.fg0},
