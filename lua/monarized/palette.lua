@@ -30,8 +30,8 @@ local colors = {
 if vim.g.monarized_style == 'light' then
   colors.fg0 = '#002b36'
   colors.fg1 = '#073642'
-  colors.bg0 = '#eee8d5'
-  colors.bg1 = '#C2C2C2'
+  colors.bg0 = '#fdf6e3'
+  colors.bg1 = '#eee8d5'
   colors.fade0 = '#586e75'
   colors.fade1 = '#657b83'
   colors.accent1 = '#2aa198'
